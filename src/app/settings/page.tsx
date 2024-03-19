@@ -1,19 +1,31 @@
+'use client'
 import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
 import Image from "next/image";
 import { Metadata } from "next";
 import ProtectedLayout from "@/components/Layouts/ProtectedLayout";
+import axios from "axios";
 
-export const metadata: Metadata = {
-  title: "Next.js Settings | TailAdmin - Next.js Dashboard Template",
-  description:
-    "This is Next.js Settings page for TailAdmin - Next.js Tailwind CSS Admin Dashboard Template",
-};
+// export const metadata: Metadata = {
+//   title: "Next.js Settings | TailAdmin - Next.js Dashboard Template",
+//   description:
+//     "This is Next.js Settings page for TailAdmin - Next.js Tailwind CSS Admin Dashboard Template",
+// };
 
 const Settings = () => {
+
+  const testAPI = async () => {
+    try {
+      const response = await axios.get("/api/hello");
+      console.log(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  }
   return (
     <ProtectedLayout>
       <div className="mx-auto max-w-270">
         <Breadcrumb pageName="Settings" />
+        <button onClick={testAPI}>Test API</button>
 
         <div className="grid grid-cols-5 gap-8">
           <div className="col-span-5 xl:col-span-3">

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "apexcharts": "^3.45.2",
+    "axios": "^1.6.8",
     "firebase": "^10.9.0",
     "flatpickr": "^4.6.13",
     "jsvectormap": "^1.5.3",
