@@ -1,7 +1,7 @@
 import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
 import { Metadata } from "next";
-import DefaultLayout from "@/components/Layouts/DefaultLayout";
 
+import ProtectedLayout from "@/components/Layouts/ProtectedLayout";
 export const metadata: Metadata = {
   title: "Next.js Alerts | TailAdmin - Next.js Dashboard Template",
   description:
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const Alerts = () => {
   return (
-    <DefaultLayout>
+    <ProtectedLayout>
       <Breadcrumb pageName="Alerts" />
 
       <div className="rounded-sm border border-stroke bg-white p-4 shadow-default dark:border-strokedark dark:bg-boxdark md:p-6 xl:p-9">
@@ -100,7 +100,7 @@ const Alerts = () => {
           </div>
         </div>
       </div>
-    </DefaultLayout>
+    </ProtectedLayout>
   );
 };
 

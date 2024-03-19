@@ -1,6 +1,5 @@
 import Calendar from "@/components/Calender";
 import { Metadata } from "next";
-import DefaultLayout from "@/components/Layouts/DefaultLayout";
 import ProtectedLayout from "@/components/Layouts/ProtectedLayout";
 
 export const metadata: Metadata = {
